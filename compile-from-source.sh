@@ -11,6 +11,10 @@ SRC_DIR=$(tar -tf $SRC_FILE | head -1)
 echo "Checck SRC_DIR variable:" $SRC_DIR
 tar xzvf $SRC_FILE
 
+# MUST install prerequisites
+# Ubuntu
+sudo apt install libapr1 libapr1-dev libaprutil1-dev
+
 #Configure
 cd ~/$SRC_DIR
 ./configure
